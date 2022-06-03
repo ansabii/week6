@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 70% 30%;
+            grid-template-rows: 15% 65% 20%;
+            grid-template-areas:
+                "hd hd"
+                "main sd"
+                "ft ft"
+            ;
+        }
+
+        header {
+            border: 1px solid;
+            grid-area: hd;
+            display: grid;
+            text-align: center;
+            align-items: center;
+            min-height: 15vh;
+        }
+
+        main {
+            border: 1px solid;
+            grid-area: main;
+            min-height: 65vh;
+            display: grid;
+            grid-template-columns: 45% 45%;
+            grid-template-rows: 40% 20% 20%;
+            grid-template-areas:
+                "main main"
+                "more1 more2"
+                "more3 more3";
+            column-gap: 10px;
+            row-gap: 30px;
+            justify-content: space-around;
+
+
+        }
+
+        .main_title {
+            grid-area: main;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .more1 {
+            grid-area: more1;
+            display: grid;
+            align-items: center;
+            background-color: blanchedalmond;
+            text-align: center;
+        }
+
+        .more2 {
+            grid-area: more2;
+            background-color: blanchedalmond;
+            text-align: center;
+            display: grid;
+            align-items: center;
+        }
+
+        .more3 {
+            grid-area: more3;
+            background-color: blanchedalmond;
+            text-align: center;
+            display: grid;
+            align-items: center;
+        }
+
+        aside {
+            border: 1px solid;
+            padding-top: 10%;
+            grid-area: sd;
+            min-height: 65vh;
+            text-align: center;
+        }
+
+        footer {
+            border: 1px solid;
+            grid-area: ft;
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            align-items: center;
+            justify-content: space-around;
+            min-height: 20vh;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .footer1,
+        .footer2,
+        .footer3,
+        .footer4 {
+            min-height: 60px;
+            background-color: blanchedalmond;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            [Шапка страницы]
+        </header>
+
+        <main>
+            <div class="main_title">[Основная часть]</div>
+            <div class="more1">[Еще1]</div>
+            <div class="more2">[Еще2]</div>
+            <div class="more3">[Еще3]</div>
+        </main>
+        <aside>
+            [Боковая часть]
+        </aside>
+        <footer>
+            <div class="footer1">[Секция футера 1]</div>
+            <div class="footer2">[Секция футера 2]</div>
+            <div class="footer3">[Секция футера 3]</div>
+            <div class="footer4">[Секция футера 4]</div>
+        </footer>
+    </div>
+</body>
+
+</html>
